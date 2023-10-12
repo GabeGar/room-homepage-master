@@ -41,7 +41,7 @@ const App = () => {
                         love.
                     </p>
                     <a
-                        className="flex items-center gap-[5rem] text-2xl uppercase tracking-[.75rem] mt-8"
+                        className="flex items-center gap-[2rem] text-2xl uppercase tracking-[1rem] mt-8"
                         href="#Shop Now"
                     >
                         Shop now
