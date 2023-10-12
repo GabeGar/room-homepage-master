@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: LeagueSpartan;
+    src: url('./assets/fonts/LeagueSpartan-VariableFont_wght.ttf');
+    font-weight: 500 700;
+}
+
+@layer base {
+    html {
+        font-family: LeagueSpartan, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 12px;
+    }
+}
+
+:root {
+
+    /* *Primary Colors */
+    --dark-gray: 0 0% 63%;
+    --black: 0 0% 0%;
+    --white: 0 0% 100%;
+    --very-dark-gray: 0 0% 27%;
+}
