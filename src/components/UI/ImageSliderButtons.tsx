@@ -7,9 +7,9 @@ const ImageSliderButtons = () => {
     const { setCurrentIndex } = useImageSlider();
 
     return (
-        <div className="absolute bottom-0 right-0">
+        <div className="absolute lg:left-0 bottom-0 right-0">
             <button
-                className="bg-primary-black px-[calc(1rem+3dvw)] py-[calc(.75rem+1dvh)]"
+                className="bg-primary-black px-[calc(1rem+1dvw)] py-[calc(.75rem+1dvh)]"
                 onClick={() => {
                     setCurrentIndex((i) => (i - 1 < 0 ? 2 : i - 1));
                 }}
@@ -21,7 +21,7 @@ const ImageSliderButtons = () => {
                 />
             </button>
             <button
-                className="bg-primary-black px-[calc(1rem+3dvw)] py-[calc(.75rem+1dvh)]"
+                className="bg-primary-black px-[calc(1rem+1dvw)] py-[calc(.75rem+1dvh)]"
                 onClick={() => {
                     setCurrentIndex((i) => (i + 1 > 2 ? 0 : i + 1));
                 }}

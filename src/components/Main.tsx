@@ -1,15 +1,20 @@
 import aboutDark from '../assets/images/image-about-dark.jpg';
 import aboutLight from '../assets/images/image-about-light.jpg';
+import ImageSliderButtons from './UI/ImageSliderButtons';
 import arrow from '/src/assets/images/icon-arrow.svg';
 
-const Main = () => {
+interface MainProps {
+    isHiddenOnDesktop: boolean;
+}
+
+const Main = ({ isHiddenOnDesktop }: MainProps) => {
     return (
-        <main>
-            <section className="flex flex-col gap-6 pt-[5rem] px-8 pb-24">
-                <h1 className="text-5xl font-bold">
+        <>
+            <section className="lg:relative lg:col-span-2 flex flex-col gap-6 pt-[5rem] px-8 pb-24 lg:justify-center lg:h-full lg:px-[7.5rem]">
+                <h1 className="lg:text-[5rem] text-5xl font-bold">
                     Discover innovative ways to decorate
                 </h1>
-                <p className="text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
+                <p className="lg:text-[1.55rem] text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
                     We provide unmatched quality, comfort, and style for
                     property owners across the country. Our experts combine form
                     and function in bringing your vision to life. Create a room
@@ -25,19 +30,20 @@ const Main = () => {
                         <img src={arrow} alt="An arrow point right" />
                     </span>
                 </a>
+                {isHiddenOnDesktop && <ImageSliderButtons />}
             </section>
-            <section>
+            <section className="lg:col-span-1 lg:row-span-1 bg-about-dark bg-no-repeat bg-contain lg:bg-cover">
                 <img
-                    className="w-full"
+                    className="lg:hidden w-full"
                     src={aboutDark}
                     alt="Dimmly lit room, with a minimalistic feel to it"
                 />
             </section>
-            <section className="px-8 py-[4rem]">
+            <section className="lg:flex lg:flex-col lg:justify-center lg:p-[7.5rem] px-8 py-[4rem] lg:col-span-2">
                 <h2 className="text-2xl uppercase tracking-[.3rem] pb-6 font-semibold">
                     About our furniture
                 </h2>
-                <p className="text-[1.33rem] text-primary-dark-gray">
+                <p className="lg:text-2xl text-[1.33rem] text-primary-dark-gray">
                     Our mulitfunctional collection blends design and function to
                     suit your individual taste. Make each room unique, or pick a
                     cohesive theme that best express your interests and what
@@ -47,14 +53,14 @@ const Main = () => {
                     dream space.
                 </p>
             </section>
-            <section>
+            <section className="lg:col-span-1 bg-about-light bg-no-repeat lg:bg-cover bg-contain">
                 <img
-                    className="w-full"
+                    className="lg:hidden w-full"
                     src={aboutLight}
                     alt="An extremely transparent image depiciting a room with light illuminating a single chair, in its center. "
                 />
             </section>
-        </main>
+        </>
     );
 };
 

@@ -4,6 +4,7 @@ import { useMobileMenu } from '../../contexts/MobileMenuContextProvider';
 
 import close from '../../assets/images/icon-close.svg';
 import usePreventScrollHTML from '../../hooks/usePreventScrollHTML';
+import NavLinks from './NavLinks';
 
 const Overlay = ({ children }: ReactChildrenNode) => {
     return (
@@ -28,20 +29,7 @@ const MobileMenu = () => {
                 >
                     <img src={close} alt="Close menu button" />
                 </button>
-                <ul className="flex items-center gap-10 text-[1.35rem] font-bold">
-                    <li>
-                        <a href="#Home">home</a>
-                    </li>
-                    <li>
-                        <a href="#Shop">shop</a>
-                    </li>
-                    <li>
-                        <a href="#About">about</a>
-                    </li>
-                    <li>
-                        <a href="#Contact">contact</a>
-                    </li>
-                </ul>
+                <NavLinks ulClasses="flex flex-wrap items-center gap-8 text-[calc(1.35rem+1dvw)]" />
             </div>
         </Overlay>
     );

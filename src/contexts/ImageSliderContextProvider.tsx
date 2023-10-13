@@ -15,7 +15,7 @@ const ImageSliderContext = createContext<ImageSliderContextTypes>({
 });
 
 const ImageSliderContextProvider = ({ children }: ReactChildrenNode) => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 1023);
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const mobileBgs: MobileBG[] = [
@@ -36,7 +36,7 @@ const ImageSliderContextProvider = ({ children }: ReactChildrenNode) => {
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth < 640) {
+            if (window.innerWidth < 1023) {
                 setIsMobile(true);
             } else {
                 setIsMobile(false);

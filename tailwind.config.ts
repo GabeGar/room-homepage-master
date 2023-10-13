@@ -4,6 +4,12 @@ export default {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
+            gridTemplateColumns: {
+                layout: '1fr 1fr .215fr 1fr',
+            },
+            gridTemplateRows: {
+                layout: '3fr 1.5fr',
+            },
             colors: {
                 'primary-dark-gray': 'hsl(var(--dark-gray) / <alpha-value>)',
                 'primary-black': 'hsl(var(--black) / <alpha-value>)',
@@ -26,6 +32,9 @@ export default {
                     'url("src/assets/images/mobile-image-hero-3.jpg")',
                 'about-dark': 'url("src/assets/images/image-about-dark.jpg")',
                 'about-light': 'url("src/assets/images/image-about-light.jpg")',
+            },
+            screens: {
+                xlg: { max: '1023px' },
             },
         },
     },

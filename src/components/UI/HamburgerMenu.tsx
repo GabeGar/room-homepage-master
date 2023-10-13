@@ -6,7 +6,7 @@ interface HamburgerMenuProps {
 
 const HamburgerMenu = ({ onMenuClick }: HamburgerMenuProps) => {
     return (
-        <button onClick={onMenuClick}>
+        <button className="lg:hidden" onClick={onMenuClick}>
             <img src={hamburgerIcon} alt="Mobile menu open button" />
         </button>
     );
