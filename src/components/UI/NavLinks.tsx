@@ -8,7 +8,7 @@ interface NavProps {
 const NavLinks = ({ ulClasses }: NavProps) => {
     const { setMobileMenuOpen } = useMobileMenu();
 
-    const allClasses = `${ulClasses} font-bold`;
+    const allClasses = `${ulClasses}`;
 
     useEffect(() => {
         const handleResize = () => {

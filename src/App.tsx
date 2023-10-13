@@ -31,14 +31,14 @@ const App = () => {
                         />
                     )}
                     <header className="absolute top-14">
-                        <nav className="flex lg:px-[8rem] lg:gap-16 lg:py-[6rem] items-center min-w-[100dvw] px-8">
+                        <nav className="flex lg:px-[8rem] lg:gap-16 lg:py-[4rem] items-center min-w-[100dvw] px-8">
                             <HamburgerMenu
                                 onMenuClick={() => {
                                     setMobileMenuOpen(true);
                                 }}
                             />
                             <Logo />
-                            <NavLinks ulClasses="xlg:hidden flex text-primary-white gap-12 text-4xl" />
+                            <NavLinks ulClasses="xlg:hidden flex text-primary-white gap-12 text-4xl  font-bold" />
                         </nav>
                     </header>
                     {!isHiddenOnDesktop && <ImageSliderButtons />}

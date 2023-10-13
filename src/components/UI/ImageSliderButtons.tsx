@@ -15,7 +15,7 @@ const ImageSliderButtons = () => {
                 }}
             >
                 <img
-                    className="max-h-[1.75rem]"
+                    className="lg:min-h-[5rem]"
                     src={leftArrow}
                     alt="Image slider left arrow"
                 />
@@ -27,7 +27,7 @@ const ImageSliderButtons = () => {
                 }}
             >
                 <img
-                    className="max-h-[1.75rem]"
+                    className="lg:min-h-[5rem]"
                     src={rightArrow}
                     alt="Image slider right arrow"
                 />

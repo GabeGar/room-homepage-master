@@ -30,14 +30,14 @@ const ImageSliderDescriptions = () => {
     const current = descriptions.find((item) => item.id === currentIndex);
 
     return (
-        <>
+        <div className="lg:max-w-[50rem] lg:flex lg:flex-col lg:gap-4">
             <h1 className="lg:text-[5rem] text-5xl font-bold">
                 {current?.title}
             </h1>
             <p className="lg:text-[1.55rem] text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
                 {current?.description}
             </p>
-        </>
+        </div>
     );
 };
 
