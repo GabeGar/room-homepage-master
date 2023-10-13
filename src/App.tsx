@@ -3,7 +3,7 @@ import { useImageSlider } from './contexts/ImageSliderContextProvider';
 
 import Main from './components/Main';
 import HamburgerMenu from './components/UI/HamburgerMenu';
-import ImageSliderButton from './components/UI/ImageSliderButtons';
+import ImageSliderButtons from './components/UI/ImageSliderButtons';
 import Logo from './components/UI/Logo';
 import MobileMenuOverlay from './components/UI/MobileMenuOverlay';
 import reqForDivHeightMobileImg from '/src/assets/images/mobile-image-hero-1.jpg';
@@ -41,10 +41,10 @@ const App = () => {
                             <NavLinks ulClasses="xlg:hidden flex text-primary-white gap-12 text-4xl" />
                         </nav>
                     </header>
-                    {!isHiddenOnDesktop && <ImageSliderButton />}
+                    {!isHiddenOnDesktop && <ImageSliderButtons />}
                 </div>
 
-                <Main isHiddenOnDesktop={isHiddenOnDesktop} />
+                <Main />
             </div>
         </>
     );

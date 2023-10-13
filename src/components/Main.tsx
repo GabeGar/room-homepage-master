@@ -1,26 +1,17 @@
 import aboutDark from '../assets/images/image-about-dark.jpg';
 import aboutLight from '../assets/images/image-about-light.jpg';
+import useHideOnDesktop from '../hooks/useHideOnDesktop';
+import ImageSliderDescriptions from './ImageSliderDescriptions';
 import ImageSliderButtons from './UI/ImageSliderButtons';
 import arrow from '/src/assets/images/icon-arrow.svg';
 
-interface MainProps {
-    isHiddenOnDesktop: boolean;
-}
+const Main = () => {
+    const { isHiddenOnDesktop } = useHideOnDesktop();
 
-const Main = ({ isHiddenOnDesktop }: MainProps) => {
     return (
         <>
             <section className="lg:relative lg:col-span-2 flex flex-col gap-6 pt-[5rem] px-8 pb-24 lg:justify-center lg:h-full lg:px-[7.5rem]">
-                <h1 className="lg:text-[5rem] text-5xl font-bold">
-                    Discover innovative ways to decorate
-                </h1>
-                <p className="lg:text-[1.55rem] text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
-                    We provide unmatched quality, comfort, and style for
-                    property owners across the country. Our experts combine form
-                    and function in bringing your vision to life. Create a room
-                    in your own style with our collection and make your property
-                    a reflection of your and what you love.
-                </p>
+                <ImageSliderDescriptions />
                 <a
                     className="flex items-center gap-[2rem] text-2xl uppercase tracking-[1rem] mt-8"
                     href="#Shop Now"
