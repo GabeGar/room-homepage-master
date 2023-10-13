@@ -2,6 +2,7 @@ import aboutDark from '../assets/images/image-about-dark.jpg';
 import aboutLight from '../assets/images/image-about-light.jpg';
 import useHideOnDesktop from '../hooks/useHideOnDesktop';
 import ImageSliderDescriptions from './ImageSliderDescriptions';
+import Arrow from './UI/Arrow';
 import ImageSliderButtons from './UI/ImageSliderButtons';
 import arrow from '/src/assets/images/icon-arrow.svg';
 
@@ -13,13 +14,11 @@ const Main = () => {
             <section className="lg:relative lg:col-span-2 flex flex-col gap-6 pt-[5rem] px-8 pb-24 lg:justify-center lg:h-full lg:px-[7.5rem]">
                 <ImageSliderDescriptions />
                 <a
-                    className="flex items-center gap-[2rem] text-2xl uppercase tracking-[1rem] mt-8"
+                    className="group hover:text-primary-very-dark-gray/50 transition-all flex items-center gap-[2rem] text-2xl uppercase tracking-[1rem] mt-8"
                     href="#Shop Now"
                 >
                     Shop now
-                    <span>
-                        <img src={arrow} alt="An arrow point right" />
-                    </span>
+                    <Arrow />
                 </a>
                 {isHiddenOnDesktop && <ImageSliderButtons />}
             </section>
