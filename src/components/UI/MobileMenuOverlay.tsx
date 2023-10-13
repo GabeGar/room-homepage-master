@@ -1,5 +1,5 @@
 import { createPortal } from 'react-dom';
-import { ReactChildrenNode } from '../../types/reactChildrenNode';
+import { ReactChildrenNode } from '../../types/ReactChildrenNode';
 import { useMobileMenu } from '../../contexts/MobileMenuContextProvider';
 
 import close from '../../assets/images/icon-close.svg';

@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import { ReactChildrenNode } from '../types/reactChildrenNode';
+import { ReactChildrenNode } from '../types/ReactChildrenNode';
 
 interface MenuContextTypes {
     mobileMenuOpen: boolean;

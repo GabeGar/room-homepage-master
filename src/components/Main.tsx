@@ -28,6 +28,7 @@ const Main = () => {
             </section>
             <section>
                 <img
+                    className="w-full"
                     src={aboutDark}
                     alt="Dimmly lit room, with a minimalistic feel to it"
                 />
@@ -48,6 +49,7 @@ const Main = () => {
             </section>
             <section>
                 <img
+                    className="w-full"
                     src={aboutLight}
                     alt="An extremely transparent image depiciting a room with light illuminating a single chair, in its center. "
                 />

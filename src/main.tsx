@@ -4,11 +4,14 @@ import App from './App.tsx';
 import './index.css';
 
 import MobileMenuContextProvider from './contexts/MobileMenuContextProvider.tsx';
+import ImageSliderContextProvider from './contexts/ImageSliderContextProvider.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement).render(
     <React.StrictMode>
         <MobileMenuContextProvider>
-            <App />
+            <ImageSliderContextProvider>
+                <App />
+            </ImageSliderContextProvider>
         </MobileMenuContextProvider>
     </React.StrictMode>
 );
