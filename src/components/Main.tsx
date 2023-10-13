@@ -4,7 +4,6 @@ import useHideOnDesktop from '../hooks/useHideOnDesktop';
 import ImageSliderDescriptions from './ImageSliderDescriptions';
 import Arrow from './UI/Arrow';
 import ImageSliderButtons from './UI/ImageSliderButtons';
-import arrow from '/src/assets/images/icon-arrow.svg';
 
 const Main = () => {
     const { isHiddenOnDesktop } = useHideOnDesktop();
