@@ -22,19 +22,19 @@ export default {
             },
             backgroundImage: {
                 'hero-desktop-one':
-                    'url("src/assets/images/desktop-image-hero-1.jpg")',
+                    'url("./assets/images/desktop-image-hero-1.jpg")',
                 'hero-desktop-two':
-                    'url("src/assets/images/desktop-image-hero-2.jpg")',
+                    'url("./assets/images/desktop-image-hero-2.jpg")',
                 'hero-desktop-three':
-                    'url("src/assets/images/desktop-image-hero-3.jpg")',
+                    'url("./assets/images/desktop-image-hero-3.jpg")',
                 'hero-mobile-one':
-                    'url("src/assets/images/mobile-image-hero-1.jpg")',
+                    'url("./assets/images/mobile-image-hero-1.jpg")',
                 'hero-mobile-two':
-                    'url("src/assets/images/mobile-image-hero-2.jpg")',
+                    'url("./assets/images/mobile-image-hero-2.jpg")',
                 'hero-mobile-three':
-                    'url("src/assets/images/mobile-image-hero-3.jpg")',
-                'about-dark': 'url("src/assets/images/image-about-dark.jpg")',
-                'about-light': 'url("src/assets/images/image-about-light.jpg")',
+                    'url("./assets/images/mobile-image-hero-3.jpg")',
+                'about-dark': 'url("./assets/images/image-about-dark.jpg")',
+                'about-light': 'url("./assets/images/image-about-light.jpg")',
             },
             screens: {
                 xlg: { max: '1023px' },
