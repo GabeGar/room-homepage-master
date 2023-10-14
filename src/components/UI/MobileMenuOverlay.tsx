@@ -8,8 +8,15 @@ import usePreventScrollHTML from '../../hooks/usePreventScrollHTML';
 import NavLinks from './NavLinks';
 
 const Overlay = ({ children }: ReactChildrenNode) => {
+    const { setMobileMenuOpen } = useMobileMenu();
+
     return (
-        <div className="absolute z-10 min-h-screen min-w-full bg-primary-black/50">
+        <div
+            onClick={() => {
+                setMobileMenuOpen(false);
+            }}
+            className="absolute z-10 min-h-screen min-w-full bg-primary-black/50"
+        >
             {children}
         </div>
     );
