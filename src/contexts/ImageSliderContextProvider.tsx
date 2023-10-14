@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import { ReactChildrenNode } from '../types/ReactChildrenNode';
-import { MobileBG, DesktopBG } from '../types/ImageSlider';
+import { MobileBG, DesktopBG } from '../types/ImageTypes';
 
 interface ImageSliderContextTypes {
     currentIndex: number;

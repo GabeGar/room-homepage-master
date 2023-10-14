@@ -10,7 +10,7 @@ const App = () => {
 
     return (
         <>
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
                 {mobileMenuOpen && <MobileMenuOverlay />}
             </AnimatePresence>
 
