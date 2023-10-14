@@ -1,4 +1,6 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useImageSlider } from '../contexts/ImageSliderContextProvider';
+import { memo } from 'react';
 
 interface Description {
     id: number;
@@ -24,21 +26,30 @@ const descriptions: Description[] = [
     },
 ];
 
-const ImageSliderDescriptions = () => {
+const ImageSliderDescriptions = memo(() => {
     const { currentIndex } = useImageSlider();
 
     const current = descriptions.find((item) => item.id === currentIndex);
 
     return (
-        <div className="lg:max-w-[50rem] lg:flex lg:flex-col lg:gap-4">
-            <h1 className="lg:text-[5rem] text-5xl font-bold">
-                {current?.title}
-            </h1>
-            <p className="lg:text-[1.55rem] text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
-                {current?.description}
-            </p>
-        </div>
+        <AnimatePresence mode="wait">
+            <motion.div
+                key={currentIndex}
+                transition={{ duration: 0.2, ease: 'easeInOut' }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="lg:max-w-[50rem] lg:flex lg:flex-col lg:gap-4"
+            >
+                <h1 className="lg:text-[5rem] text-5xl font-bold">
+                    {current?.title}
+                </h1>
+                <p className="lg:text-[1.55rem] text-[calc(1.025rem+1dvw)] text-primary-dark-gray">
+                    {current?.description}
+                </p>
+            </motion.div>
+        </AnimatePresence>
     );
-};
+});
 
 export default ImageSliderDescriptions;

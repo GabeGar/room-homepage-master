@@ -6,12 +6,14 @@ interface ImageSliderContextTypes {
     currentIndex: number;
     setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
     currentImage: MobileBG | DesktopBG;
+    isMobile: boolean;
 }
 
 const ImageSliderContext = createContext<ImageSliderContextTypes>({
     currentIndex: 0,
     setCurrentIndex: () => 0,
     currentImage: 'bg-hero-mobile-one',
+    isMobile: false,
 });
 
 const ImageSliderContextProvider = ({ children }: ReactChildrenNode) => {
@@ -56,6 +58,7 @@ const ImageSliderContextProvider = ({ children }: ReactChildrenNode) => {
                 currentIndex,
                 setCurrentIndex,
                 currentImage,
+                isMobile,
             }}
         >
             {children}
